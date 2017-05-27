@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TODO: Set these values!-->
+    <string name="baseURL_endpoint">Put base URL here</string>
+    <string name="alice_endpoint">Put alice end point here (eg. /alice)</string>
+    <string name="sofie_endpoint">Put sofie end point here (eg. /sofie)</string>
+   
+</resources>
