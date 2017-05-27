@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca.ualberta_ecocar.ecocar.TimeKeeperFragment"
+    android:orientation="vertical"
+    android:background="@color/BackgroundDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.20"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <FrameLayout
+            android:id="@+id/TimeKeeperSpeed"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.50"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_data_display"/>
+
+        <FrameLayout
+            android:id="@+id/TimeKeeperEfficiency"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.50"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_data_display"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.20"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <FrameLayout
+            android:id="@+id/TimeKeeperFCVoltage"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.50"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_data_display"/>
+
+        <FrameLayout
+            android:id="@+id/TimeKeeperMotorCurrent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.50"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_data_display"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.20"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <FrameLayout
+            android:id="@+id/TimeKeeperFCAlarm"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.50"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_data_display"/>
+
+        <FrameLayout
+            android:id="@+id/TimeKeeperFCState"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.50"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_data_display"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/TimeKeeperRaceTime"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_width="match_parent"
+        android:layout_weight="0.20"
+        android:layout_height="0dp"
+        tools:layout="@layout/fragment_data_display"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.20"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <FrameLayout
+            android:id="@+id/TimeKeeperCurrentLapTime"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.70"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_data_display"/>
+
+        <FrameLayout
+            android:id="@+id/TimeKeeperCurrentLap"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.30"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_data_display"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.10"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <Button
+            android:text="@string/start_race"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_corner_button_background"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-thin"
+            android:id="@+id/StartRace"
+            android:textSize="20sp" />
+
+        <Button
+            android:text="@string/Increase_lap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_corner_button_background"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-thin"
+            android:id="@+id/IncreaseLap"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.10"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <Button
+            android:id="@+id/ResetStopRace"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/rounded_corner_button_background"
+            android:fontFamily="sans-serif-thin"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/reset_race"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:text="@string/decrease_lap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_corner_button_background"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-thin"
+            android:id="@+id/DecreaseLap"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

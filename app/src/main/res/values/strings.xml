@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">EcoCar</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_drivers">DriversActivity</string>
+
+    <string name="title_activity_welcome_screen">WelcomeScreen</string>
+    <string name="ImATeamMemberButton">I\'m a Team Member</string>
+    <string name="ImACarButton">I\'m in a Car</string>
+
+    <string name="current_driving_car_save">CurrentCarToDrive</string>
+    <string name="current_watching_car_save">CurrentCarToWatch</string>
+
+    <string name="ask_for_perms_button">Allow Permissions</string>
+    <string name="explain_perms_request">This app requires access to the Location of the car, Bluetooth and Jason\'s soul. \n\nPlease accept all the permissions after clicking the button or the app will catch on fire.</string>
+
+    <string name="bluetooth_connect_car_explain">Pair the car to this phone, then select from connected devices below.</string>
+    <string name="bluetooth_to_car_title">Connect To Car</string>
+
+    <string name="current_bluetooth_device_address_save">BluetoothDeviceAddressSave</string>
+    <string name="current_bluetooth_device_name_save">BluetoothDeviceNameSave</string>
+    <string name="choose_a_car_text">Choose a Car</string>
+    <string name="alice">Alice</string>
+    <string name="prototype">Sofie</string>
+
+    <string name="launch_control">Launch Control</string>
+
+    <string name="could_not_connect_to_current_bluetooth_device">Could not connect to current\nbluetooth device</string>
+    <string name="retry">Retry?</string>
+    <string name="select_new_bluetooth_device">Select new Bluetooth device</string>
+    <string name="start_race">Start Race</string>
+    <string name="reset_race">Reset Race</string>
+    <string name="Increase_lap">+1 Lap</string>
+    <string name="decrease_lap">-1 Lap</string>
+
+</resources>

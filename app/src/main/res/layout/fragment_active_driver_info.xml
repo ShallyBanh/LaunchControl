@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textColor="#FFFFFF"
+    android:orientation="horizontal"
+    android:fontFamily="sans-serif-thin"
+    android:background="@color/BackgroundDark"
+    android:weightSum="1"
+    tools:context="ca.ualberta_ecocar.ecocar.ActiveDriverInfoFragment">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.3"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:id="@+id/CurrentLap"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_weight="0.20"
+            android:layout_height="0dp"
+            tools:layout="@layout/fragment_data_display"/>
+
+            <FrameLayout
+                android:id="@+id/FCVoltageData"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                tools:layout="@layout/fragment_data_display"/>
+
+            <FrameLayout
+                android:id="@+id/MotorCurrentData"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                tools:layout="@layout/fragment_data_display"/>
+
+            <FrameLayout
+                android:id="@+id/FCStateData"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                tools:layout="@layout/fragment_data_display"/>
+
+            <FrameLayout
+                android:id="@+id/FCErrorData"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                tools:layout="@layout/fragment_data_display"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.7"
+        android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="0.18"
+                android:weightSum="1">
+
+
+                <FrameLayout
+                    android:id="@+id/CurrentLapTime"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.40"
+                    android:layout_height="match_parent"
+                    tools:layout="@layout/fragment_data_display"/>
+
+                <FrameLayout
+                    android:id="@+id/TotalRaceTime"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.60"
+                    android:layout_height="match_parent"
+                    tools:layout="@layout/fragment_data_display"/>
+
+            </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/Speedometer"
+            android:layout_margin="10dp"
+            android:layout_weight="0.82"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:layout="@layout/fragment_data_display"/>
+
+    </LinearLayout>
+
+</LinearLayout>

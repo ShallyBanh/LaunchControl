@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="EcoCarLightGreen">#71A543</color>
+    <color name="EcoCarMidGreen">#2D8746</color>
+    <color name="EcoCarDarkGreen">#007445</color>
+    <color name="BackgroundDark">#2c3e50</color>
+    <color name="BackgroundDark2">#34495e</color>
+    <color name="VeryDarkBackground">#202529</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

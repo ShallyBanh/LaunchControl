@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundDark"
+    tools:context="ca.ualberta_ecocar.ecocar.BluetoothSetupFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-thin"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="40sp"
+        android:textSize="40sp"
+        android:id="@+id/bluetooth_to_car_title"
+        android:text="@string/bluetooth_to_car_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-thin"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/bluetooth_to_car_title"
+        android:layout_marginTop="40dp"
+        android:id="@+id/bluetooth_to_car_decs"
+        android:text="@string/bluetooth_connect_car_explain" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/bluetooth_to_car_decs"
+        android:id="@+id/bluetooth_device_list"
+        >
+
+    </ListView>
+
+</RelativeLayout>

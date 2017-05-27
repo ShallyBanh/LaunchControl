@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- From StackOverFlow post: https://stackoverflow.com/questions/17760299/android-fragmenttransaction-custom-animation-unknown-animator-name-translate -->
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <objectAnimator
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:duration="500"
+        android:propertyName="x"
+        android:valueFrom="1000"
+        android:valueTo="0"
+        android:valueType="floatType" />
+
+</set>

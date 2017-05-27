@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundDark"
+    tools:context="ca.ualberta_ecocar.ecocar.DataDisplayFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_corner_button_background">
+
+
+        <Chronometer
+            android:id="@+id/CurrentTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format="HH:mm:ss:SSS"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:text="Race Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#FFFFFF"
+            android:background="@color/BackgroundDark"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/TitleData"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</FrameLayout>

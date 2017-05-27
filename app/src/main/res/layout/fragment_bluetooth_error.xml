@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textColor="#FFFFFF"
+    android:background="@color/BackgroundDark"
+    android:gravity="center_horizontal"
+    tools:context="ca.ualberta_ecocar.ecocar.BluetoothErrorFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/could_not_connect_to_current_bluetooth_device"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-thin"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:id="@+id/BluetoothErrorText"/>
+
+
+    <Button
+        android:text="@string/retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:background="@drawable/rounded_corner_button_background"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-thin"
+        android:id="@+id/RetryBlueToothConnection"
+        android:layout_marginTop="40dp"
+        android:textSize="25sp" />
+
+    <Button
+        android:text="@string/select_new_bluetooth_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_button_background"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-thin"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/SelectNewBluetooth"
+        android:textSize="25sp" />
+
+</LinearLayout>
