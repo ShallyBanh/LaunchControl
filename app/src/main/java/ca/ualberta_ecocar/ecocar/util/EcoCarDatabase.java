@@ -12,6 +12,9 @@ import java.net.URISyntaxException;
 import ca.ualberta_ecocar.ecocar.R;
 import io.socket.client.IO;
 import io.socket.client.Socket;
+import okhttp3.OkHttpClient;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class EcoCarDatabase {
@@ -20,6 +23,10 @@ public class EcoCarDatabase {
 
     private Socket socket;
     private Gson gson;
+    private Retrofit.Builder builder;
+    private Retrofit retrofit;
+    private DataPacketInterface client;
+    private OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
     public EcoCarDatabase(Activity activity, boolean isObserver){
         baseUrl = activity.getString(R.string.baseURL_endpoint);
@@ -41,6 +48,22 @@ public class EcoCarDatabase {
             e.printStackTrace();
         }
         socket.connect();
+
+        builder =
+                new Retrofit.Builder()
+                        .baseUrl(socketName)
+                        .addConverterFactory(
+                                GsonConverterFactory.create()
+                        );
+
+        retrofit =
+                builder
+                        .client(
+                                httpClient.build()
+                        )
+                        .build();
+
+        client =  retrofit.create(DataPacketInterface.class);
         gson = new Gson();
     }
 
@@ -64,32 +87,41 @@ public class EcoCarDatabase {
             e.printStackTrace();
         }
         socket.connect();
+
+        builder =
+                new Retrofit.Builder()
+                        .baseUrl(socketName)
+                        .addConverterFactory(
+                                GsonConverterFactory.create()
+                        );
+
+        retrofit =
+                builder
+                        .client(
+                                httpClient.build()
+                        )
+                        .build();
+
+        client =  retrofit.create(DataPacketInterface.class);
     }
 
     public void sendWebDataPacketToServer(WebDataPacket data){
-        if (socket.connected()){
-            socket.emit("data", gson.toJson(data));
-        }
-        else{
-            // Try to connect again
-            Log.v("EcoDatabase", "Not connected when trying to send data. Trying to connect again.");
-            socket.connect();
-        }
+        client.shoveCarDataToCloud(data);
+        //socket.emit("data", gson.toJson(data));
+
     }
 
     public void sendTimerUpdate(TimerDataPacket data){
-        if (socket.connected()){
-            socket.emit("time", gson.toJson(data));
-        }
-        else{
-            // Try to connect again
-            Log.v("EcoDatabase", "Not connected when trying to send data. Trying to connect again.");
-            socket.connect();
-        }
+        client.shoveTimeDataToCloud(data);
+        //socket.emit("time", gson.toJson(data));
     }
 
     public Socket getActiveSocket(){
         return socket;
+    }
+
+    public DataPacketInterface getRetrofitClient(){
+        return client;
     }
 
     public Gson getGson(){
